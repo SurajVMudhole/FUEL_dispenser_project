@@ -44,7 +44,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
     </form>
     <div class="side">
         <p>Block all the vehicle haveing more than 3 challans.</p>
-        <button class="btn btn-primary"><a href="./chblock.php">Block</a></button>
+        <button class="btn btn-danger"><a href="./chblock.php">Block</a></button>
     </div>
    </div>
     </div>
@@ -53,7 +53,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
     <br>
     <h1>Blocked Vehicle list</h1>
     <br>
-   <table class="table">
+   <table class="table table-danger">
   <thead>
     <tr>
       <th scope="col">Sl.no</th>
@@ -80,7 +80,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
           <td>'.$reason.'</td>
           <td>'.$block_date.'</td>
           <td>
-          <button class="btn btn-primary"><a class="text-white" 
+          <button class="btn btn-danger"><a class="text-white" 
           href="unblock.php?regno='.$regno.'">Unblock</a></button>
           </td>
         </tr>';
@@ -93,7 +93,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
    <br>
    <div>
     <h1> History</h1>
-    <table class="table">
+    <table class="table table-success">
   <thead>
     <tr>
       <th scope="col">Sl.no</th>

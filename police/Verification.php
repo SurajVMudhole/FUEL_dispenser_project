@@ -21,31 +21,33 @@ include './navbar.php';
       <th scope="col">Submitted Date</th>
       <th scope="col">File</th>
       <th scope="col">verification</th>
+      <th scope="col">Accept</th>
+      <th scope="col">Reject</th>
     </tr>
   </thead>
   <tbody>
-          
   <?php
-
 $sql_doc = "SELECT * FROM documents where File_status='Under Verification'";
 $result=mysqli_query($conn,$sql_doc);
 $count=1;
 
 if(mysqli_num_rows($result)>0){
 while($row=mysqli_fetch_assoc($result)){
-    
-        echo("
-        <tr>
-        <td>".$count."</td>
-        <td>".$row['Reg_no']."</td>
-        <td>".$row['File_type']."</td>
-        <td>".$row['Submitted_date']."</td>
-        <td>".$row['file_name']."</td>
-        <td><button onclick=\"viewFile( '".$row['Reg_no']."','".$row['file_name']."')\">Veiw</button></td>
-        <td><button onclick=\"checkFile( 'Verifed','".$row['Reg_no']."','".$row['file_name']."')\">Accept</button>  <button onclick=\"checkFile( 'Rejected','".$row['Reg_no']."','".$row['file_name']."')\">Reject</button></td>
-    </tr>");
-    $count++;
-    
+    echo "<tr>
+    <th scope='row'>".$count."</th>
+    <td>".$row['Reg_no']."</td>
+    <td>".$row['File_type']."</td>
+    <td>".$row['Submitted_date']."</td>
+    <td>".$row['file_name']."</td>
+    <td><button type='button' class='btn btn-primary' onclick=\"viewFile( '".$row['Reg_no']."','".$row['file_name']."')\">View</button></td>
+    <td>
+    <button type='button' class='btn btn-success' onclick=\"checkFile( 'Verifed','".$row['Reg_no']."','".$row['file_name']."')\">Accept</button>
+    </td>
+    <td>
+    <button type='button' class='btn btn-danger' onclick=\"checkFile( 'Rejected','".$row['Reg_no']."','".$row['file_name']."')\">Reject</button>
+    </td>
+  </tr>";
+  $count++;
   }
 }
 ?>
@@ -85,7 +87,5 @@ while($row=mysqli_fetch_assoc($result)){
 
     }
 </script>
-
-
 </body>
 </html>

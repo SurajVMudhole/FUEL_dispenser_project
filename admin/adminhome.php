@@ -65,7 +65,7 @@ $old_diesel_amt=$row['price'];
 </nav>
 <h1>Fuel Price</h1>
 <div class="oldamtbox">
-  <h2>Old Amount</h2>
+  <h2> Amount</h2>
   <h3>Petrol <i class="ri-money-rupee-circle-fill"></i><span><?php echo $old_petrol_amt; ?></span>/L</h3>
   <h3>Diesel <i class="ri-money-rupee-circle-fill"></i><span><?php echo $old_diesel_amt; ?></span>/L</h3>
 </div>
@@ -73,7 +73,7 @@ $old_diesel_amt=$row['price'];
 <div class="mainbox">
   <div class="petrolbox">
     <div class="fuel_img">
-      <img src="https://etimg.etb2bimg.com/photo/104331958.cms" alt="">
+      <img src="https://etimg.etb2bimg.com/photo/104331958.cms" alt="Petrol_image">
     </div>
     <div>
       <label for="petrolamt">Petrol Price <i class="ri-money-rupee-circle-fill"></i></label>
@@ -83,7 +83,7 @@ $old_diesel_amt=$row['price'];
   </div>
   <div class="dieselbox">
   <div class="fuel_img">
-    <img src="https://s3.amazonaws.com/wp-images.bankspower.com/performance-upgrades/wp-content/uploads/2000/12/13_dpf_-_300_-_mg_2.jpg" alt="">
+    <img src="https://s3.amazonaws.com/wp-images.bankspower.com/performance-upgrades/wp-content/uploads/2000/12/13_dpf_-_300_-_mg_2.jpg" alt="Diesel_iamge">
   </div>
   <div>
   <label for="dieselamt">Diesel Price <i class="ri-money-rupee-circle-fill"></i></label>
