@@ -1,4 +1,9 @@
-
+<?php
+include './dbconnect.php';
+Session_start();
+session_unset();
+session_destroy();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +29,7 @@
         <div class="navright">
           <a href="#home_section">Home</a>
           <a href="#reg_section">Register</a>
-          <a href="#" id="signin">Sign-In</a>
+          <a href="./user/user_login.php" id="signin">Sign-In</a>
         </div>
       </nav>
     </header>
@@ -209,33 +214,36 @@
         </div>
         <div class="regright">
           <div id="regfrom">
-            <form action="#">
+            <form action="./signup.php" method="POST">
               <input
                 type="text"
+                name="username"
                 id="Fname"
-                placeholder="First Name*"
+                placeholder="Enter Your Name*"
                 required
               />
-              <input type="text" id="Lname" placeholder="Last Name*" required />
               <br />
               <input
                 type="number"
                 id="user_mobile"
                 placeholder="Mobile number*"
+                name="phone"
                 required
               />
-              <input type="email" id="user_mail" placeholder="Email Id" />
+              <input type="email" id="user_mail" placeholder="Email Id" name="email" />
               <br />
               <input
                 type="password"
                 id="password"
                 placeholder="password*"
+                name="password"
                 required
               />
               <input
                 type="password"
                 id="confirmpassword"
                 placeholder="Re-enter password"
+                name="confirm-password"
                 required
               />
               <br />
@@ -243,17 +251,10 @@
                 type="submit"
                 value="Submit"
                 id="submitbtn"
-                onclick="message()"
               />
               <p>* Required feilds</p>
+              <p>Already Have Account then <span><a style="color:#fe8901; text-decoration:none" href="">Sign_in</a></span></p>
             </form>
-            <div class="alertmsg">
-              <div id="successmsg">
-                <h4>Successfully Registerd</h4>
-              </div>
-              <div id="failedmsg">Something went Wrong please try again</div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -274,7 +275,7 @@
           <ul>
             <li><a href="#home_section">Home</a></li>
             <li><a href="#">About Us</a></li>
-            <li><a href="#">Sign In</a></li>
+            <li><a href="./user/user_login.php">Sign In</a></li>
             <li><a href="./police/policelogin.php">Police Login</a></li>
             <li><a href="#">RTO Login</a></li>
             <li><a href="./admin/adminlogin.php">Admin Login</a></li>
@@ -285,7 +286,6 @@
         <p>&copy; 2023 Smart Fuel Station</p>
       </div>
     </footer>
-    <!-- Footer ends herex -->
-    <script src="./assest/scripting/script.js"></script>
+    <!-- Footer ends here -->
   </body>
 </html>

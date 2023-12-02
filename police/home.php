@@ -1,5 +1,5 @@
 <?php
-include 'sessionset.php';
+include './sessionset.php';
 include './navbar.php';
 ?>
 <!DOCTYPE html>
