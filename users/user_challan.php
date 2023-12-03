@@ -88,7 +88,7 @@ table tbody tr:hover {
     
     $user= $_SESSION['username1'];
     // echo($user);
-    include('dbconnect.php');
+    include "../dbconnect.php";
     include('nav.php');
     $sql = "Select account_balance,name from registration where Reg_no = '$user'";
     $result = mysqli_query($conn,$sql);

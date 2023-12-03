@@ -9,9 +9,9 @@
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
         <input type="text" name="rfid">
         <input type="submit" value="insert">
-    </form> 
+    </form>
     <?php
-    include("db.php");
+    include "../dbconnect.php";
     $sql_fuel_p = "Select price from `fuel_price` where fuel ='Petrol'";
     $row_p=mysqli_fetch_assoc(mysqli_query($conn,$sql_fuel_p));
     $petrol_p = $row_p['price'];

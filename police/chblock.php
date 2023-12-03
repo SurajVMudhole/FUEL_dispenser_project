@@ -1,6 +1,6 @@
 <?php
 include 'sessionset.php';
-include './dbconnect.php';
+include '../dbconnect.php';
 $sql="select * from  registration WHERE status=1";
 //this gets all reg no having challan status as 1
 $result = $conn->query($sql);

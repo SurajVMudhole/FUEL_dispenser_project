@@ -1,6 +1,6 @@
 <?php
 // verify_otp.php
-include 'dbconnect.php';
+include "../dbconnect.php";
 // Start the session
 session_start();
 

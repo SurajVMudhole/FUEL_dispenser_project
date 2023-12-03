@@ -12,7 +12,7 @@
 </style>
 <body>
     <?php
-    include('dbconnect.php');
+include "../dbconnect.php";
     include('nav.php');
     ?>
     <div class="abc">

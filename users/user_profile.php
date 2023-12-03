@@ -17,7 +17,7 @@
        exit();
        
     }
-    include("dbconnect.php");
+    include "../dbconnect.php";
     include("nav.php");
     $user= $_SESSION['username1'];
     // echo($user);

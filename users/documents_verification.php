@@ -23,12 +23,8 @@
   }
   </style>
     <?php
-    
- 
-    
-    // $user= $_SESSION['username1'];
-    // echo($user);
-    include('dbconnect.php');
+
+    include "../dbconnect.php";
 
 
 

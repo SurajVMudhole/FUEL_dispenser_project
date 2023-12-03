@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <?php
-    include('dbconnect.php');
+include "../dbconnect.php";
     $Reg_no=Null;
     session_start();
     include('nav1.php');

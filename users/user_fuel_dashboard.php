@@ -74,7 +74,7 @@ table tbody tr:hover {
     
     $user= $_SESSION['username1'];
     // echo($user);
-    include('dbconnect.php');
+    include "../dbconnect.php";
     include('nav.php');
 
     $sql = "Select Fuel_used,tank_capacity,name from registration where Reg_no = '$user'";

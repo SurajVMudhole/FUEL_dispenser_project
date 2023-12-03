@@ -21,7 +21,7 @@
     
     $user= $_SESSION['username1'];
     // echo($user);
-    include('dbconnect.php');
+    include "../dbconnect.php";
     include('nav.php');
 
     $sql = "Select  File_type,Submitted_date,verified_date,File_status from documents where Reg_no = '$user' and File_type= 'pollution_certifcate' ORDER BY verified_date  DESC";

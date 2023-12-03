@@ -1,5 +1,5 @@
 <?php
-include './dbconnect.php';
+include '../dbconnect.php';
 include 'sessionset.php';
 include './navbar.php';
 if($_SERVER["REQUEST_METHOD"]=="POST"){

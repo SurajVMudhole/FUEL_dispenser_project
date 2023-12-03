@@ -6,7 +6,7 @@
 <body>
     
     <?php
-    include("dbconnect.php");
+include "../dbconnect.php";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve form data
     $username = test_input($_POST["username"]);

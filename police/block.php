@@ -1,6 +1,6 @@
 <?php
 include './sessionset.php';
-include './dbconnect.php';
+include '../dbconnect.php';
 include './navbar.php';
 if($_SERVER['REQUEST_METHOD']=="POST"){
     $regno=$_POST['regno'];

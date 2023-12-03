@@ -1,6 +1,6 @@
 <?php
 include './sessionset.php';
-include './dbconnect.php';
+include '../dbconnect.php';
 include './navbar.php';
 ?><!DOCTYPE html>
 <html lang="en">

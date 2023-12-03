@@ -1,6 +1,6 @@
 <?php
 include 'sessionset.php';
-include './dbconnect.php';
+include '../dbconnect.php';
 
 if($_GET['regno']){
     $regno=$_GET['regno'];
