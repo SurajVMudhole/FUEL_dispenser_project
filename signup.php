@@ -1,6 +1,6 @@
 <head>
 <?php
-     if (isset($password_msg)){ echo "<p style='color: green;'>$password_msg</p>"; } 
+     if (isset($password_msg)){ echo "<p style='color: green;'>$password_msg</p>"; }
       if (isset($password_error)) { echo "<p style='color: red;'>$password_error</p>"; } ?>
 </head>
 <body>
@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                         echo "<p style='color: green;'>$password_msg</p>"; 
                                         echo "<script>
                                         setTimeout(function() {
-                                            window.location.href = 'user_login.php';
+                                            window.location.href = './user/user_login.php';
                                         }, 2000);
                                       </script>";
                                      }

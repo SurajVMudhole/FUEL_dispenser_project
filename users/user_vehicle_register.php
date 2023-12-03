@@ -235,7 +235,7 @@ if(isset($_SESSION['verification_result'])){
                         <td>".$row['Reg_no']."</td>
                         <td>".$row['Name']."</td>
                         <td>".$row['RFID_no']."</td>
-                        <td><button type ='submit'  onclick=\"updateStatus('".$row['Reg_no']."')\">Login</button>
+                        <td><button type ='submit'  onclick=\"updateStatus('".$row['Reg_no']."')\">Use</button>
                         </td>
                          
                        

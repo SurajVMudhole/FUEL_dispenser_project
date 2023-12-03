@@ -29,7 +29,7 @@ session_destroy();
         <div class="navright">
           <a href="#home_section">Home</a>
           <a href="#reg_section">Register</a>
-          <a href="./user/user_login.php" id="signin">Sign-In</a>
+          <a href="./users/user_login.php" id="signin">Sign-In</a>
         </div>
       </nav>
     </header>
@@ -253,7 +253,7 @@ session_destroy();
                 id="submitbtn"
               />
               <p>* Required feilds</p>
-              <p>Already Have Account then <span><a style="color:#fe8901; text-decoration:none" href="">Sign_in</a></span></p>
+              <p>Already Have Account then <span><a style="color:#fe8901; text-decoration:none" href="./users/user_login.php">Sign_in</a></span></p>
             </form>
         </div>
       </div>
@@ -275,9 +275,9 @@ session_destroy();
           <ul>
             <li><a href="#home_section">Home</a></li>
             <li><a href="#">About Us</a></li>
-            <li><a href="./user/user_login.php">Sign In</a></li>
+            <li><a href="./users/user_login.php">Sign In</a></li>
             <li><a href="./police/policelogin.php">Police Login</a></li>
-            <li><a href="#">RTO Login</a></li>
+            <li><a href="./RTO/rtopage.php">RTO Login</a></li>
             <li><a href="./admin/adminlogin.php">Admin Login</a></li>
           </ul>
         </div>
