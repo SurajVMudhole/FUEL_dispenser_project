@@ -59,7 +59,9 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 
 
 
-<div class="left-side"></div>
+<div class="left-side">
+    
+</div>
     <div class="right-side">
         <div class="login-form">
         <?php
@@ -127,7 +129,7 @@ if ($login) {
 
         .left-side {
             flex: 0 0 60%;
-            background: url('asset/image.jpeg') center/cover no-repeat;             position: relative;
+            background: url('https://imgs.search.brave.com/NVgkfuYymVFbPuZsYqRJEhB6lggdpp0_qcCPUXYjEuA/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9i/dXNpbmVzc21hbi1s/b2dnaW5nLWhpcy10/YWJsZXRfNTM4NzYt/MTAyMDI5LmpwZz9z/aXplPTYyNiZleHQ9/anBn') center/cover no-repeat;             position: relative;
         }
 
         .right-side {
