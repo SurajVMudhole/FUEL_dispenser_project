@@ -23,6 +23,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/block.css">
     <title> Police | Block</title>
+    <link rel="icon" type="image/png" href="../assest/images/favicon.ico" />
 </head>
 <body>
     <div  class="box">

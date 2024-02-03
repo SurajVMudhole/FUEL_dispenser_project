@@ -10,7 +10,7 @@ session_destroy();
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="./assest/images/favicon.png" />
+    <link rel="icon" type="image/png" href="./assest/images/favicon.ico" />
     <link rel="stylesheet" href="./assest/styling/home.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"

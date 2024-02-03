@@ -29,6 +29,7 @@ if ($conn->query($sql) === TRUE) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/createchallan.css" />
     <title>Police | Create Challan</title>
+    <link rel="icon" type="image/png" href="../assest/images/favicon.ico" />
   </head>
   <body>
     <div class="challan_form">

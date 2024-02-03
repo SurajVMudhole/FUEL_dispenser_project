@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="../assest/images/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajax-unobtrusive/3.2.6/jquery.unobtrusive-ajax.min.js"></script>
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <!-- <script src="paytry.js"></script> -->
-    <title>challan</title>
+    <title>User | Challan</title>
     <!-- <h1>Challans</h1> -->
 </head>
 <body>
