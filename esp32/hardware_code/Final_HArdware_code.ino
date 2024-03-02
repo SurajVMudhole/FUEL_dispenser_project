@@ -9,9 +9,14 @@
 #include <WiFiClient.h>
 #include <HTTPClient.h>
 
+
 // const declarations
 #define SS_PIN 5
 #define RST_PIN 22
+#define RELAY_PIN 21 // Define the pin connected to the relay
+#define buzzer 15
+
+
 
 MFRC522 rfid(SS_PIN, RST_PIN);
 const char* ssid = "surajsonu"; //--> Your wifi name or SSID.
@@ -20,6 +25,9 @@ const char* password = "svm@12345";
 //setup
 void setup(){
   Serial.begin(115200);
+  pinMode(21,OUTPUT);
+  pinMode(buzzer,OUTPUT);
+  digitalWrite(21,HIGH);
   WiFi.mode(WIFI_STA);
   WiFi.begin(ssid, password); 
   Serial.println("");
@@ -44,7 +52,7 @@ void loop(){
     const size_t capacity = JSON_OBJECT_SIZE(3) + 30;
     DynamicJsonDocument doc(capacity);
     const char* uid;
-    int fuelamt;
+    float fuelamt;
     const char* fueltype  ;
     int ID;
     // if card read 
@@ -53,6 +61,9 @@ void loop(){
       UID += (rfid.uid.uidByte[i] < 0x10 ? "0" : "");
       UID += String(rfid.uid.uidByte[i], HEX);
     } 
+    digitalWrite(buzzer,HIGH);
+    delay(700);
+    digitalWrite(buzzer,LOW);
     Serial.println("");
     Serial.print("Card UID: ");
     Serial.println(UID);
@@ -62,7 +73,6 @@ void loop(){
     LinkGet = "https://192.168.29.10/fuel_dispenser/RFID_API.php"; 
     getData = "UID=" + UID;
     Serial.println("----------------first Connect to Server-----------------");
-    Serial.println("Get LED Status from Server or Database");
     Serial.print("Request Link : ");
     Serial.println(LinkGet);
     http.begin(LinkGet); 
@@ -96,9 +106,23 @@ void loop(){
     Serial.println("----------------Closing Connection----------------");
     http.end(); //--> Close first connection
 
-    // hit send the data to arduino 
-    delay(5000);
+    // hit send the data to arduino
     int status_flag=1;
+    digitalWrite(buzzer,HIGH);
+    delay(1000);
+    digitalWrite(buzzer,LOW);
+    delay(500);
+    digitalWrite(buzzer,HIGH);
+    delay(1000);
+    digitalWrite(buzzer,LOW);
+  digitalWrite(RELAY_PIN, LOW);
+  fuelamt=fuelamt*2*10*1000;
+  delay(fuelamt); // Wait for 1 second
+  // Turn off the relay (active low)
+  digitalWrite(RELAY_PIN, HIGH);
+      digitalWrite(buzzer,HIGH);
+    delay(1000);
+    digitalWrite(buzzer,LOW);
     //sencond api hit
    LinkGet = "https://192.168.29.10/fuel_dispenser/Respnse_API.php"; 
    getData = "UID=" + UID+"&ID="+ID+"&status_flag="+status_flag;
